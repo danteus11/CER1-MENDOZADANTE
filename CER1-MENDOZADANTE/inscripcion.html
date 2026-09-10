@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Inscripcion</title>
+</head>
+<body>
+    <!-- etiqueta semántica para agrupar la cabecera visual o el encabezado principal-->
+    <header>
+        <!-- Bloque de navegacion, inicializa los estilos, define el punto de quiebre, configura la estética-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <!-- Crea una caja contenedora que centra todo el contenido del menú y le deja márgenes automáticos a los lados para que no quede pegado a los bordes de la pantalla-->
+            <div class="container">
+                <!-- relaciones entre recursos, clase de Bootstrap específica para darle un estilo destacado-->
+                <a class="navbar-brand fw-bold" href="principal.html"> Puerto Abierto</a>
+                <!-- Diseña el botón cuadrado con bordes,, le ordena a Bootstrap que este botón tiene la función de contraer o expandir un elemento,Le indica exactamente cuál elemento de la página debe abrir o cerrar
+                     para lectores de pantalla-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- dibuja las 3 rayitas-->    
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--Oculta los enlaces en pantallas pequeñas y los agrupa en una caja de hamburguesa, id unico que vincula este bloque con el data-bs-target del boton-->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!--navbar-nav le indica a Bootstrap que esta lista funciona como los ítems del menú-->
+                    <ul class="navbar-nav ms-auto">
+                        <!--Cada item de la lista, lleva la clase nav-item para darle los espacios correctos-->
+                        <li class="nav-item">
+                            <!--El enlace real que ve el usuario. La clase nav-link le da el color, el efecto cuando pasas el mouse por encima y la tipografía adecuada-->
+                            <a class="nav-link" href="principal.html"> Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cartelera.html"> Cartelera</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="inscripcion.html"> Inscripciones</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <!-- Titulo principal -->
+        <div class="row text-center mb-4">
+            <div class="col-lg-8 mx-auto">
+                <h1 class="fw-bold display-5">Formulario de Inscripción</h1>
+                <p class="text-muted lead">Completa tus datos y selecciona el taller o actividad en el que deseas participar.</p>
+            </div>
+        </div>
+
+        <!-- Contenedor del Formulario -->
+         <!--Alinea horizontalmente al centro los elementos dentro de la fila-->
+        <div class="row justify-content-center">
+            <!--Define un ancho responsivo personalizado para la tarjeta del formulario-->
+            <div class="col-lg-7 col-md-9">
+                <div class="card shadow-sm p-4">
+                    <!--Etiqueta semántica de HTML que agrupa todos los campos interactivos de entrada-->
+                    <form>
+                        <!-- Nombre Completo -->
+                        <div class="mb-3">
+                            <!--El atributo for se conecta con el id del input correspondiente para mejorar la accesibilidad, otorga tipografía profesional-->
+                            <label for="nombre" class="form-label fw-bold">Nombre Completo</label>
+                            <!--Campo de entrada de datos estándar, rediseña los campos de entrada dándoles un aspecto moderno, Atributo nativo de HTML que vuelve obligatorio el campo-->
+                            <input type="text" class="form-control" id="nombre" placeholder="Ej: Juan Pérez" required>
+                        </div>
+
+                        <!-- Edad -->
+                        <div class="mb-3">
+                            <label for="edad" class="form-label fw-bold">Edad</label>
+                            <input type="number" class="form-control" id="edad" placeholder="Ej: 22" min="1" max="120" required>
+                        </div>
+
+                        <!-- Correo Electronico -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">Correo Electrónico</label>
+                            <!--Control especializado de HTML que valida automáticamente que el texto ingresado cumpla con la estructura correcta de un correo electrónico-->
+                            <input type="email" class="form-control" id="email" placeholder="tucorreo@ejemplo.com" required>
+                        </div>
+
+                        <!-- Telefono de Contacto -->
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label fw-bold">Teléfono / Celular</label>
+                            <!--Control especializado para números de teléfono-->
+                            <input type="tel" class="form-control" id="telefono" placeholder="+56 9 1234 5678" required>
+                        </div>
+
+                        <!-- Seleccion de Actividad -->
+                        <div class="mb-3">
+                            <label for="actividad" class="form-label fw-bold">Selecciona una Actividad</label>
+                            <!--Elemento interactivo de HTML que despliega un menú de opciones seleccionables en forma de lista desplegable, Clase de Bootstrap que moderniza el aspecto del menú-->
+                            <select class="form-select" id="actividad" required>
+                                <!--Define la opción inicial del menú-->
+                                <option value="" selected disabled>Elige un taller...</option>
+                                <option value="pintura">Taller de Pintura al Óleo</option>
+                                <option value="teatro">Teatro y Expresión</option>
+                                <option value="fotografia">Introducción a la Fotografía</option>
+                                <option value="ceramica">Taller de Cerámica Utilitaria</option>
+                                <option value="musica">Ensambles Sonoros y Guitarra</option>
+                                <option value="literatura">Círculo de Lectura y Creación</option>
+                            </select>
+                        </div>
+
+                        <!-- Comentarios o Dudas (Textarea) -->
+                        <div class="mb-3">
+                            <label for="comentarios" class="form-label fw-bold">Comentarios o Preguntas (Opcional)</label>
+                            <!--Campo de entrada de texto multilínea, Atributo que define la altura inicial del cuadro de texto, mostrando por defecto 3 líneas de espacio vertical.-->
+                            <textarea class="form-control" id="comentarios" rows="3" placeholder="¿Tienes alguna consulta específica sobre el taller?"></textarea>
+                        </div>
+
+                        <!-- Terminos y Condiciones (Check) -->
+                         <!--Contenedor estructural de Bootstrap optimizado para alinear correctamente una casilla de verificación-->
+                        <div class="mb-3 form-check">
+                            <!--Control interactivo de tipo casilla de verificación para opciones de marcado binario, Clase de Bootstrap que reemplaza el diseño antiguo de las casillas del navegador por un checkbox moderno-->
+                            <input type="checkbox" class="form-check-input" id="terminos" required>
+                            <!--Clase de Bootstrap que ajusta la posición y tipografía de la etiqueta de texto-->
+                            <label class="form-check-label small text-muted" for="terminos">Acepto los términos y condiciones de asistencia a los talleres del Centro Cultural.</label>
+                        </div>
+
+                        <!-- Boton de Envio -->
+                         <!--convierte el contenedor en una cuadrícula flexible, haciendo que el botón ubicado en su interior se expanda horizontalmente para ocupar el 100%-->
+                        <div class="d-grid">
+                            <!--Elemento interactivo encargado de activar el envío de los datos recopilados en el formulario al hacer clic sobre él-->
+                            <button type="submit" class="btn btn-dark btn-lg">Enviar Inscripción</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <!--Elimina cualquier margen inferior predeterminado del párrafo-->
+            <p class="mb-0 small">&copy; 2026 Centro Cultural Puerto Abierto. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

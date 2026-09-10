@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Principal</title>
+</head>
+<body>
+    <!-- etiqueta semántica para agrupar la cabecera visual o el encabezado principal-->
+    <header>
+        <!-- Bloque de navegacion, inicializa los estilos, define el punto de quiebre, configura la estética-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <!-- Crea una caja contenedora que centra todo el contenido del menú y le deja márgenes automáticos a los lados para que no quede pegado a los bordes de la pantalla-->
+            <div class="container">
+                <!-- relaciones entre recursos, clase de Bootstrap específica para darle un estilo destacado-->
+                <a class="navbar-brand fw-bold" href="principal.html"> Puerto Abierto</a>
+                <!-- Diseña el botón cuadrado con bordes,, le ordena a Bootstrap que este botón tiene la función de contraer o expandir un elemento,Le indica exactamente cuál elemento de la página debe abrir o cerrar
+                     para lectores de pantalla-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- dibuja las 3 rayitas-->    
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--Oculta los enlaces en pantallas pequeñas y los agrupa en una caja de hamburguesa, id unico que vincula este bloque con el data-bs-target del boton-->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!--navbar-nav le indica a Bootstrap que esta lista funciona como los ítems del menú-->
+                    <ul class="navbar-nav ms-auto">
+                        <!--Cada item de la lista, lleva la clase nav-item para darle los espacios correctos-->
+                        <li class="nav-item">
+                            <!--El enlace real que ve el usuario. La clase nav-link le da el color, el efecto cuando pasas el mouse por encima y la tipografía adecuada-->
+                            <a class="nav-link" href="principal.html"> Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cartelera.html"> Cartelera</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="inscripcion.html"> Inscripciones</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--engloba el contenido principal-->
+    <main>
+        <!--Utilidad de espaciado (Padding Y: arriba y abajo), hace que el bloque ocupe el 100% del ancho, linea de borde solo en la parte inferior de la sección para separarla de la siguiente-->
+        <section class="py-5 text-center container-fluid bg-light border-bottom">
+            <!--para organizar columnas de forma ordenada, añade padding vertical (py) solo cuando la pantalla es grande-->
+            <div class="row py-lg-4">
+                <!--Configuración responsiva de la columna-->
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <!--hace que el título se vea gigante y moderno-->
+                    <h1 class="fw-bold display-5">Centro Cultural Puerto Abierto</h1>
+                    <!--Hace que un párrafo de texto se vea un poco más grande y destacado, cambia el color del texto a un tono gris suave, margen vertical de tamaño 3-->
+                    <p class="lead text-muted my-3">
+                        Un espacio vivo dedicado a promover el arte, la cultura y la educación para toda la comunidad.
+                    </p>
+                    <p>
+                        <!--Agrega un pequeño margen arriba y abajo-->
+                        <a href="cartelera.html" class="btn btn-dark btn-lg my-2">Ver Cartelera de Actividades</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Identificacion y proposito -->
+        <section class="container my-5">
+            <!--alinea verticalmente al centro los elementos que están al lado-->
+            <div class="row align-items-center">
+                <!--Divide la pantalla de las tablets en adelante en dos mitades iguales-->
+                <div class="col-md-6">
+                    <!--Margen inferior-->
+                    <h2 class="fw-bold mb-3">Nuestra Misión</h2>
+                    <!--Da un color gris intermedio al texto-->
+                    <p class="text-secondary">
+                        Durante los últimos años hemos ampliado nuestra oferta de talleres, exposiciones y presentaciones abiertas al público. Buscamos ser un punto de encuentro integrador donde la comunidad pueda desarrollar su creatividad, aprender nuevas disciplinas y conectar con artistas locales.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <!--hace que la imagen sea completamente responsiva y se adapte al ancho de la columna, Redondea las esquinas, Añade una sombra pequeña, para limitar la altura máxima a 300 píxeles-->
+                    <img src="img/lugar.jpg" alt="Centro Cultural" class="img-fluid rounded shadow-sm" style="max-height: 300px; object-fit: cover;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Act Destacadas -->
+        <section class="bg-light py-5">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-4">Actividades Destacadas</h2>
+                <!--crea una separación uniforme y elegante entre las tarjetas-->
+                <div class="row g-4">
+                    
+                    <!-- Act 1 -->
+                     <!--crea tres columnas exactas en pantallas medianas y grandes-->
+                    <div class="col-md-4">
+                        <!--crear tarjetas contenedoras con bordes y fondo blanco, todas las tarjetas midan exactamente el 100% de la altura de la fila-->
+                        <div class="card h-100 shadow-sm">
+                            <!--la imagen va ubicada específicamente en la parte superior de la tarjeta-->
+                            <img src="img/pintura.jpg" class="card-img-top" alt="Taller de Pintura" style="height: 200px; object-fit: cover;">
+                            <!--contenedor interno de la tarjeta donde se aloja el texto, los títulos y los botones-->
+                            <div class="card-body">
+                                <!--distintivo de color gris para indicar la categoría-->
+                                <span class="badge bg-secondary mb-2">Arte</span>
+                                <!--Clase que le da el estilo de título principal a los encabezados-->
+                                <h5 class="card-title fw-bold">Taller de Pintura al Óleo</h5>
+                                <!--Estilo de párrafo optimizado para tarjetas-->
+                                <p class="card-text text-muted small">Explora las técnicas básicas y experimenta con texturas y colores sobre lienzo.</p>
+                                <!--Crea un botón que no tiene relleno de color sólido, sino solo un borde oscuro que se rellena al pasar el mouse por encima-->
+                                <a href="inscripcion.html" class="btn btn-outline-dark btn-sm">Inscribirme</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Act 2 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="img/escenario.png" class="card-img-top" alt="Teatro Comunitario" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <span class="badge bg-secondary mb-2">Escénicas</span>
+                                <h5 class="card-title fw-bold">Teatro y Expresión</h5>
+                                <p class="card-text text-muted small">Ejercicios de improvisación y pérdida del miedo escénico para jóvenes y adultos.</p>
+                                <a href="inscripcion.html" class="btn btn-outline-dark btn-sm">Inscribirme</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Act 3 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 shadow-sm">
+                            <img src="img/fotografias.png" class="card-img-top" alt="Fotografía" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <span class="badge bg-secondary mb-2">Multimedia</span>
+                                <h5 class="card-title fw-bold">Introducción a la Fotografía</h5>
+                                <p class="card-text text-muted small">Aprende a manejar el encuadre, la luz y la exposición con tu propia cámara o celular.</p>
+                                <a href="inscripcion.html" class="btn btn-outline-dark btn-sm">Inscribirme</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ubicacion y contacto -->
+        <section class="container my-5">
+            <!--Centra horizontalmente todo el texto-->
+            <div class="row text-center">
+                <!--Ocupa las 12 columnas completas-->
+                <div class="col-md-12">
+                    <h2 class="fw-bold mb-3">Ubicación y Contacto</h2>
+                    <p class="text-muted">¿Tienes dudas o quieres visitarnos? Encuéntranos en:</p>
+                    <!--Margen inferior muy pequeño-->
+                    <p class="fw-bold mb-1">Av. Cultural #450, Valparaíso</p>
+                    <p class="text-secondary">Correo: contacto@puertoabierto.cl | Teléfono: +56 9 1234 5678</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <!--Elimina cualquier margen inferior predeterminado del párrafo-->
+            <p class="mb-0 small">&copy; 2026 Centro Cultural Puerto Abierto. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
