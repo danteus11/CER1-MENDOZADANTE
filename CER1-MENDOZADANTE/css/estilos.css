@@ -1,23 +1,23 @@
-/* 1. Identidad Visual y Tipografía General */
+/* Identidad Visual y Tipografia General */
 body {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: #333333;
     background-color: #f8f9fa;
 }
 
-/* 2. Coherencia en Títulos Principales */
+/* Coherencia en Titulos Principales */
 h1, h2, h3 {
     color: #1a1a1a;
     letter-spacing: -0.5px;
 }
 
-/* 3. Personalización y Uniformidad de Imágenes en Tarjetas */
+/* Personalizacion y Uniformidad de Imagenes en Tarjetas */
 .card-img-top {
     height: 200px;
     object-fit: cover;
 }
 
-/* 4. Interactividad y Estética en Tarjetas (Hover) */
+/* Interactividad y Estetica en Tarjetas */
 .card {
     border: 1px solid rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -28,7 +28,7 @@ h1, h2, h3 {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
 }
 
-/* 5. Consistencia en el Footer Institucional */
+/* Consistencia en el Footer Institucional */
 footer {
     letter-spacing: 0.5px;
 }
